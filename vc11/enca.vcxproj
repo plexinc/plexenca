@@ -137,6 +137,9 @@
     <ClInclude Include="..\lib\internal.h" />
     <ClInclude Include="..\tools\encodings.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="enca.def" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

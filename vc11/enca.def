@@ -34,3 +34,4 @@ enca_analyser_language
 enca_language_english_name
 enca_get_languages
 enca_get_language_charsets
+enca_set_termination_strictness
