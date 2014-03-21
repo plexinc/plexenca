@@ -36,6 +36,8 @@
 #define ENCA_STMT_START do
 #define ENCA_STMT_END while (0)
 
+#define ssize_t int
+
 /* Flags for character type table.
  * 0-10 are standard ones, 11-13 Enca-specific. */
 enum {

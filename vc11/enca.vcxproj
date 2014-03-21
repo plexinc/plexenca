@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{99AB50DD-2BBC-4BE3-A3FD-E61C6116BE0F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>enca</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ENCA_EXPORTS;%(PreprocessorDefinitions);HAVE_STRING_H;HAVE_MEMORY_H;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ENCA_EXPORTS;%(PreprocessorDefinitions);HAVE_STRING_H;HAVE_MEMORY_H;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib\common.c" />
+    <ClCompile Include="..\lib\ctype.c" />
+    <ClCompile Include="..\lib\enca.c" />
+    <ClCompile Include="..\lib\encnames.c" />
+    <ClCompile Include="..\lib\filters.c" />
+    <ClCompile Include="..\lib\guess.c" />
+    <ClCompile Include="..\lib\lang.c" />
+    <ClCompile Include="..\lib\lang_be.c" />
+    <ClCompile Include="..\lib\lang_bg.c" />
+    <ClCompile Include="..\lib\lang_cs.c" />
+    <ClCompile Include="..\lib\lang_et.c" />
+    <ClCompile Include="..\lib\lang_hr.c" />
+    <ClCompile Include="..\lib\lang_hu.c" />
+    <ClCompile Include="..\lib\lang_lt.c" />
+    <ClCompile Include="..\lib\lang_lv.c" />
+    <ClCompile Include="..\lib\lang_pl.c" />
+    <ClCompile Include="..\lib\lang_ru.c" />
+    <ClCompile Include="..\lib\lang_sk.c" />
+    <ClCompile Include="..\lib\lang_sl.c" />
+    <ClCompile Include="..\lib\lang_uk.c" />
+    <ClCompile Include="..\lib\lang_zh.c" />
+    <ClCompile Include="..\lib\multibyte.c" />
+    <ClCompile Include="..\lib\pair.c" />
+    <ClCompile Include="..\lib\unicodemap.c" />
+    <ClCompile Include="..\lib\utf8_double.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\data\belarussian\belarussian.h" />
+    <ClInclude Include="..\data\bulgarian\bulgarian.h" />
+    <ClInclude Include="..\data\chinese\chinese.h" />
+    <ClInclude Include="..\data\chinese\zh_weight_big5.h" />
+    <ClInclude Include="..\data\chinese\zh_weight_gbk.h" />
+    <ClInclude Include="..\data\croatian\croatian.h" />
+    <ClInclude Include="..\data\czech\czech.h" />
+    <ClInclude Include="..\data\estonian\estonian.h" />
+    <ClInclude Include="..\data\hungarian\hungarian.h" />
+    <ClInclude Include="..\data\latvian\latvian.h" />
+    <ClInclude Include="..\data\lithuanian\lithuanian.h" />
+    <ClInclude Include="..\data\polish\polish.h" />
+    <ClInclude Include="..\data\russian\russian.h" />
+    <ClInclude Include="..\data\slovak\slovak.h" />
+    <ClInclude Include="..\data\slovene\slovene.h" />
+    <ClInclude Include="..\data\ukrainian\ukrainian.h" />
+    <ClInclude Include="..\lib\enca.h" />
+    <ClInclude Include="..\lib\internal.h" />
+    <ClInclude Include="..\tools\encodings.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
